@@ -1,0 +1,158 @@
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about-wrap {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* =========================================================
+   AVATAR COLUMN
+========================================================= */
+
+.about-avatar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* =========================================================
+   AVATAR BOX
+========================================================= */
+
+.avatar-box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+}
+
+.avatar-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 28px;
+  border: 2px solid transparent;
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent),
+      var(--accent2)
+    ) border-box;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  animation: ring-spin 6s linear infinite;
+}
+
+.avatar-initials {
+  position: relative;
+  z-index: 1;
+  font-family: "Syne", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent),
+      var(--accent2)
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.avatar-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent-soft),
+      var(--accent2-soft)
+    );
+  pointer-events: none;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.about-stats {
+  width: 200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.stat-item {
+  padding: 0.9rem 0.75rem;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.stat-num {
+  display: block;
+  font-family: "Syne", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.stat-lbl {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   ABOUT TEXT
+========================================================= */
+
+.about-text-col {
+  max-width: 600px;
+}
+.about-lead {
+  margin-bottom: 1.25rem;
+  color: var(--text-primary);
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.about-body {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+/* =========================================================
+   CHIP
+========================================================= */
+
+.chip {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent),
+      var(--accent2)
+    );
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}

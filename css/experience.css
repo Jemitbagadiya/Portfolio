@@ -1,0 +1,152 @@
+/* =========================================================
+   EXPERIENCE GRID
+========================================================= */
+
+.exp-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+/* =========================================================
+   EXPERIENCE CARD
+========================================================= */
+
+.exp-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 20px;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+.exp-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.exp-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  font-size: 1.2rem;
+}
+.achievement-icon {
+  background:
+    linear-gradient(
+      135deg,
+      #f7c948,
+      #f97316
+    );
+  color: #ffffff;
+  box-shadow:
+    0 4px 16px rgba(249, 115, 22, 0.3);
+}
+.intern-icon {
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent),
+      var(--accent2)
+    );
+  color: #ffffff;
+  box-shadow:
+    0 4px 16px rgba(0, 212, 170, 0.3);
+}
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.exp-badge {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.achiev-badge {
+  background: rgba(247, 201, 72, 0.15);
+  color: #f7c948;
+}
+.intern-badge {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* =========================================================
+   EXPERIENCE TEXT
+========================================================= */
+
+.exp-title {
+  margin-bottom: 0.25rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.exp-role {
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.exp-desc {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   TECH TAGS
+========================================================= */
+
+.exp-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.exp-tech span {
+  padding: 0.2rem 0.55rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+/* =========================================================
+   CERTIFICATE BUTTON
+========================================================= */
+
+.cert-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #00d4aa;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.cert-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 212, 170, 0.1);
+}

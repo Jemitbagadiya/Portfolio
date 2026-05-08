@@ -1,0 +1,311 @@
+/* =========================================================
+   LOADER
+========================================================= */
+
+.loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9000;
+  background:
+    linear-gradient(
+      135deg,
+      #e7ecff 0%,
+      #eef2ff 45%,
+      #f8f9ff 100%
+    );
+  transition:
+    opacity 0.5s,
+    visibility 0.5s;
+}
+[data-theme="dark"] .loader {
+  background: var(--bg);
+}
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader-inner {
+  text-align: center;
+}
+.loader-name {
+  margin-bottom: 0.3rem;
+  font-family: "Syne", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent),
+      var(--accent2)
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: pulse-scale 1s ease infinite alternate;
+}
+.loader-bar {
+  width: 200px;
+  height: 3px;
+  overflow: hidden;
+  background: var(--border);
+  border-radius: 99px;
+}
+.loader-fill {
+  width: 0;
+  height: 100%;
+  background:
+    linear-gradient(
+      90deg,
+      var(--accent),
+      var(--accent2)
+    );
+  border-radius: 99px;
+  animation: fill-bar 1.5s ease forwards;
+}
+.loader-info {
+  width: 200px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+  position: relative;
+  min-height: clamp(650px, 100vh, 800px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* =========================================================
+   HERO CANVAS
+========================================================= */
+
+#heroCanvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* =========================================================
+   HERO BLOBS
+========================================================= */
+
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+  animation: blob-drift 12s ease-in-out infinite alternate;
+}
+.hero-blob.b1 {
+  width: 500px;
+  height: 500px;
+  top: -100px;
+  left: -100px;
+  background: var(--accent);
+  animation-duration: 14s;
+}
+.hero-blob.b2 {
+  width: 400px;
+  height: 400px;
+  bottom: -50px;
+  right: -50px;
+  background: var(--accent2);
+  animation-duration: 10s;
+  animation-delay: -4s;
+}
+.hero-blob.b3 {
+  width: 300px;
+  height: 300px;
+  top: 40%;
+  left: 40%;
+  background: #ff6b9d;
+  opacity: 0.08;
+  animation-duration: 16s;
+  animation-delay: -8s;
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:
+    120px 2rem 80px;
+}
+
+/* =========================================================
+   HERO BADGE
+========================================================= */
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0.4rem 0.9rem;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: 99px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: blink 1.5s ease infinite;
+}
+
+/* =========================================================
+   HERO NAME
+========================================================= */
+
+.hero-name {
+  margin-bottom: 1.25rem;
+  font-size: clamp(3.5rem, 6vw, 7.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -3px;
+}
+.name-line {
+  display: block;
+}
+.name-line.accent {
+  display: inline-block;
+  padding-bottom: 10px;
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent) 0%,
+      var(--accent2) 100%
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.hero-title {
+  margin-bottom: 1rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+.title-dash {
+  margin-right: 0.4rem;
+  color: var(--accent);
+}
+
+/* =========================================================
+   HERO TAGLINE
+========================================================= */
+
+.hero-tagline {
+  margin-bottom: 2.5rem;
+  font-family: "Syne", sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  opacity: 0.9;
+}
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* =========================================================
+   HERO SOCIALS
+========================================================= */
+
+.hero-socials {
+  display: flex;
+  gap: 0.75rem;
+}
+.hero-socials a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+.hero-socials a:hover {
+  transform: translateY(-3px);
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* =========================================================
+   SCROLL HINT
+========================================================= */
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.scroll-line {
+  width: 1px;
+  height: 50px;
+  background:
+    linear-gradient(
+      to bottom,
+      var(--accent),
+      transparent
+    );
+  animation: line-pulse 2s ease infinite;
+}

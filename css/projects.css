@@ -1,0 +1,199 @@
+/* =========================================================
+   PROJECTS GRID
+========================================================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* =========================================================
+   PROJECT CARD
+========================================================= */
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 20px;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent-soft),
+      var(--accent2-soft)
+    );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 24px 48px rgba(0, 0, 0, 0.3);
+}
+.project-card:hover::before {
+  opacity: 1;
+}
+
+/* =========================================================
+   PROJECT NUMBER
+========================================================= */
+
+.project-num {
+  position: absolute;
+  top: 2.3rem;
+  right: 175px;
+  pointer-events: none;
+  font-family: "Syne", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  opacity: 0.15;
+  line-height: 1;
+}
+
+/* =========================================================
+   PROJECT TOP
+========================================================= */
+
+.project-top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.project-icon-wrap {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent),
+      var(--accent2)
+    );
+  border-radius: 14px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  box-shadow:
+    0 4px 16px rgba(0, 212, 170, 0.3);
+}
+
+/* =========================================================
+   GITHUB BUTTON
+========================================================= */
+
+.gh-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.gh-btn:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* =========================================================
+   PROJECT TITLE
+========================================================= */
+
+.project-title {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   PROJECT DESCRIPTION
+========================================================= */
+
+.project-desc {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.25rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   PROJECT TECH
+========================================================= */
+
+.project-tech {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.project-tech span {
+  padding: 0.25rem 0.6rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* =========================================================
+   APK BUTTON
+========================================================= */
+
+.apk-btn {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1rem;
+  padding: 0.5rem 0.9rem;
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent),
+      var(--accent2)
+    );
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.apk-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 20px rgba(0, 212, 170, 0.25);
+}

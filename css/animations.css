@@ -1,0 +1,109 @@
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.reveal-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.65s ease var(--d, 0s),
+    transform 0.65s ease var(--d, 0s);
+}
+.reveal-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   PULSE SCALE
+========================================================= */
+
+@keyframes pulse-scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+/* =========================================================
+   FILL BAR
+========================================================= */
+
+@keyframes fill-bar {
+  to {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   BLINK
+========================================================= */
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* =========================================================
+   BLOB DRIFT
+========================================================= */
+
+@keyframes blob-drift {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, 20px) scale(1.05);
+  }
+  100% {
+    transform: translate(-20px, 30px) scale(0.95);
+  }
+}
+
+/* =========================================================
+   LINE PULSE
+========================================================= */
+
+@keyframes line-pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1.2);
+  }
+}
+
+/* =========================================================
+   RING SPIN
+========================================================= */
+
+@keyframes ring-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   FADE IN
+========================================================= */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
