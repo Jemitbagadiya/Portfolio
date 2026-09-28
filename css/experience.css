@@ -1,31 +1,77 @@
 /* =========================================================
-   EXPERIENCE GRID
+   EXPERIENCE — VERTICAL TIMELINE
 ========================================================= */
 
 .exp-grid {
-  display: grid;
-  grid-template-columns:
-    repeat(auto-fill, minmax(340px, 1fr));
-  gap: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /*
+    Timeline + cards area.
+    The main container still controls the overall section.
+  */
+  width: 950px;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 32px;
+  padding: 20px 0 30px;
+  transform: translateX(-60px);
 }
+
+/* =========================================================
+   VERTICAL TIMELINE
+========================================================= */
+
+.exp-grid::before {
+  content: "";
+  position: absolute;
+  /*
+    Timeline position.
+    The target screenshot has the line around x = 322px
+    while the card starts around x = 380px.
+  */
+  left: 215px;
+  top: 20px;
+  bottom: 30px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    #62dff0,
+    #8fa7ff
+  );
+  opacity: 0.7;
+  z-index: 0;
+}
+
 
 /* =========================================================
    EXPERIENCE CARD
 ========================================================= */
 
 .exp-card {
-  display: flex;
-  gap: 1.5rem;
-  padding: 2rem;
+  position: relative;
+  display: block;
+  /*
+    Target screenshot card width.
+  */
+  width: 650px;
+  /*
+    Push card to the right of timeline.
+  */
+  margin-left: 273px;
+  padding: 25px;
+  box-sizing: border-box;
   border-radius: 20px;
   transition:
-    transform 0.25s,
-    box-shadow 0.25s;
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  z-index: 1;
 }
+
 .exp-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.2);
+    0 20px 40px rgba(0, 0, 0, 0.14);
 }
 
 /* =========================================================
@@ -33,6 +79,13 @@
 ========================================================= */
 
 .exp-icon {
+  position: absolute;
+  /*
+    Card begins at 273px.
+    Icon needs to sit around timeline at 215px.
+  */
+  left: -84px;
+  top: 4px;
   width: 52px;
   height: 52px;
   flex-shrink: 0;
@@ -40,8 +93,15 @@
   align-items: center;
   justify-content: center;
   border-radius: 16px;
+  border: 0;
   font-size: 1.2rem;
+  z-index: 3;
 }
+
+/* =========================================================
+   ACHIEVEMENT ICON
+========================================================= */
+
 .achievement-icon {
   background:
     linear-gradient(
@@ -51,8 +111,14 @@
     );
   color: #ffffff;
   box-shadow:
-    0 4px 16px rgba(249, 115, 22, 0.3);
+    0 8px 20px rgba(249, 115, 22, 0.28);
 }
+
+
+/* =========================================================
+   INTERNSHIP ICON
+========================================================= */
+
 .intern-icon {
   background:
     linear-gradient(
@@ -62,7 +128,16 @@
     );
   color: #ffffff;
   box-shadow:
-    0 4px 16px rgba(0, 212, 170, 0.3);
+    0 8px 20px rgba(0, 212, 170, 0.28);
+}
+
+
+/* =========================================================
+   EXPERIENCE BODY
+========================================================= */
+
+.exp-body {
+  width: 100%;
 }
 
 /* =========================================================
@@ -71,44 +146,60 @@
 
 .exp-badge {
   display: inline-block;
-  margin-bottom: 0.6rem;
-  padding: 0.2rem 0.65rem;
+  margin-bottom: 10px;
+  padding: 6px 10px;
   border-radius: 6px;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+
 .achiev-badge {
   background: rgba(247, 201, 72, 0.15);
-  color: #f7c948;
+  color: #e8b52f;
 }
+
+
 .intern-badge {
   background: var(--accent-soft);
   color: var(--accent);
 }
 
 /* =========================================================
-   EXPERIENCE TEXT
+   EXPERIENCE TITLE
 ========================================================= */
 
 .exp-title {
-  margin-bottom: 0.25rem;
+  margin-bottom: 4px;
   font-size: 1.15rem;
   font-weight: 700;
+  line-height: 1.3;
 }
+
+/* =========================================================
+   EXPERIENCE ROLE
+========================================================= */
+
 .exp-role {
-  margin-bottom: 0.75rem;
+  margin-bottom: 16px;
   color: var(--accent);
   font-size: 0.9rem;
   font-weight: 500;
+  line-height: 1.4;
 }
+
+/* =========================================================
+   EXPERIENCE DESCRIPTION
+========================================================= */
+
 .exp-desc {
-  margin-bottom: 1rem;
+  margin-bottom: 14px;
   color: var(--text-secondary);
   font-size: 0.9rem;
   line-height: 1.7;
 }
+
 
 /* =========================================================
    TECH TAGS
@@ -117,16 +208,18 @@
 .exp-tech {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 6px;
 }
+
 .exp-tech span {
-  padding: 0.2rem 0.55rem;
+  padding: 4px 8px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 6px;
   color: var(--text-muted);
   font-size: 0.75rem;
 }
+
 
 /* =========================================================
    CERTIFICATE BUTTON
@@ -137,16 +230,123 @@
   align-items: center;
   gap: 8px;
   margin-top: 14px;
-  padding: 10px 16px;
+  padding: 8px 12px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  border-radius: 8px;
   color: #00d4aa;
   text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
+  font-size: 0.75rem;
+  transition: 0.3s ease;
 }
+
 .cert-btn:hover {
   transform: translateY(-2px);
   background: rgba(0, 212, 170, 0.1);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+  .exp-grid {
+    width: 720px;
+  }
+  .exp-grid::before {
+    left: 70px;
+  }
+  .exp-card {
+    width: calc(100% - 120px);
+    margin-left: 120px;
+  }
+  .exp-icon {
+    left: -84px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .exp-grid {
+    width: 100%;
+    padding: 15px 0 20px;
+    gap: 20px;
+
+    /* ADD THIS */
+    transform: none;
+  }
+
+  .exp-grid::before {
+    left: 20px;
+    top: 15px;
+    bottom: 20px;
+  }
+
+  .exp-card {
+    width: calc(100% - 50px);
+    margin-left: 50px;
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .exp-icon {
+    left: -49px;
+    top: 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+  }
+
+  .exp-title {
+    font-size: 1rem;
+  }
+  .exp-role {
+    font-size: 0.8rem;
+  }
+  .exp-desc {
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+  .exp-badge {
+    font-size: 0.6rem;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .exp-grid {
+    transform: none;
+  }
+  .exp-grid::before {
+    left: 19px;
+  }
+  .exp-card {
+    width: calc(100% - 44px);
+    margin-left: 44px;
+    padding: 15px;
+  }
+  .exp-icon {
+    left: -43px;
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+    font-size: 0.85rem;
+  }
+  .exp-title {
+    font-size: 0.95rem;
+  }
+  .exp-role {
+    font-size: 0.75rem;
+  }
+  .exp-desc {
+    font-size: 0.75rem;
+  }
 }

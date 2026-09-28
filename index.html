@@ -19,20 +19,6 @@
   <!-- Scroll Progress Bar -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- Loading Screen -->
-  <div class="loader" id="loader">
-    <div class="loader-inner">
-      <div class="loader-name">JB</div>
-      <div class="loader-bar">
-        <div class="loader-fill" id="loaderFill"></div>
-      </div>
-      <div class="loader-info">
-        <span>LOADING...</span>
-        <span id="loaderPercent">0%</span>
-      </div>
-    </div>
-  </div>
-
   <!-- NAV -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
@@ -83,7 +69,7 @@
         <a href="#contact" class="btn btn-outline">
           Contact Me
         </a>
-        <a href="https://drive.google.com/file/d/1kgj1-Z_xZ4Qe12swBXFYDayG0c4RwjCn/view?usp=drive_link"
+        <a href="https://drive.google.com/file/d/1vhmHx0tVG6DLFGiKGpToboSkCzUJLRlA/view?usp=drive_link"
           class="btn btn-outline" target="_blank">
           <i class="fas fa-download"></i> Resume
         </a>
@@ -124,11 +110,11 @@
               <span class="stat-lbl">Projects</span>
             </div>
             <div class="stat-item glass">
-              <span class="stat-num">8.91</span>
+              <span class="stat-num">8.85</span>
               <span class="stat-lbl">CGPA</span>
             </div>
             <div class="stat-item glass">
-              <span class="stat-num">2</span>
+              <span class="stat-num">3</span>
               <span class="stat-lbl">Internship</span>
             </div>
             <div class="stat-item glass">
@@ -143,7 +129,7 @@
             technologies — passionate about crafting secure, efficient digital solutions.
           </p>
           <p class="about-body">
-            Currently pursuing a BE in Information Technology with a CGPA of <span class="chip">8.91</span>. I enjoy
+            Currently pursuing a BE in Information Technology with a CGPA of <span class="chip">8.85</span>. I enjoy
             solving real-world problems through clean code and thoughtful architecture — from robust backend systems to
             polished, intuitive frontends.
           </p>
@@ -184,8 +170,8 @@
             <h3>Frontend</h3>
           </div>
           <div class="skill-tags">
-            <span class="stag"><i class="fab fa-html5"></i> HTML5</span>
-            <span class="stag"><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span class="stag"><i class="fab fa-html5"></i> HTML</span>
+            <span class="stag"><i class="fab fa-css3-alt"></i> CSS</span>
             <span class="stag"><i class="fab fa-js"></i> JavaScript</span>
           </div>
         </div>
@@ -245,31 +231,80 @@
           <div class="project-num">01</div>
           <div class="project-top">
             <div class="project-icon-wrap"><i class="fas fa-lock"></i></div>
-            <a href="https://github.com/Jemitbagadiya/EncryptVault" target="_blank" class="gh-btn"><i
-                class="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/Jemitbagadiya/EncryptVault" 
+              target="_blank" 
+              class="gh-btn">
+              <i class="fab fa-github"></i> GitHub </a>
           </div>
           <h3 class="project-title">EncryptVault</h3>
-          <p class="project-desc">A secure file management system with AES encryption and OTP-based authentication.
-            Users can upload, read, download, and delete encrypted files securely, built using Java and MySQL.</p>
+          <p class="project-desc">EncryptVault is a Java-based secure file management application that 
+            protects user files using AES encryption and MySQL for metadata management. 
+            It includes user registration and login with OTP verification, SHA-256 password hashing, 
+            encrypted file storage, secure file access and download, file deletion, 
+            activity tracking, profile management, and automatic session timeout.</p>
           <div class="project-tech">
-            <span>Java</span><span>AES
-              Encryption</span><span>MySQL</span><span>Security</span><span>Auth</span><span>SHA-256</span>
+            <span>Java</span>
+            <span>AES Encryption</span>
+            <span>MySQL</span>
+            <span>Security</span>
+            <span>OTP Auth</span>
+            <span>SHA-256</span>
           </div>
         </div>
 
         <div class="project-card glass reveal-up" style="--d:0s">
           <div class="project-num">02</div>
           <div class="project-top">
+            <div class="project-icon-wrap"><i class="fas fa-chart-line"></i></div>
+            <div>
+              <a href="https://github.com/Jemitbagadiya/seoai" 
+                target="_blank" 
+                class="gh-btn">
+                <i class="fab fa-github"></i> GitHub </a>
+              <a href="https://seoai-jemit.vercel.app/"
+                target="_blank"
+                class="gh-btn">
+                <i class="fas fa-external-link-alt"></i> Live Demo </a>
+            </div>
+          </div>
+          <h3 class="project-title">SEO Brief AI</h3>
+          <p class="project-desc">An AI-powered SEO research tool that combines Google Gemini 
+            with live SERP data to analyze top-ranking pages for a target keyword and 
+            generate actionable content briefs. It delivers structured outlines, 
+            SEO recommendations, meta tags, target word counts, and PDF export for 
+            streamlined content planning.</p>
+          <div class="project-tech">
+            <span>Next.js</span>
+            <span>API Integration</span>
+            <span>Gemini API</span>
+            <span>SerpAPI</span>
+            <span>SEO</span>
+            <span>PDF Export</span>
+          </div>
+        </div>
+
+        <div class="project-card glass reveal-up" style="--d:0s">
+          <div class="project-num">03</div>
+          <div class="project-top">
             <div class="project-icon-wrap"><i class="fas fa-book-open"></i></div>
-            <a href="https://github.com/Jemitbagadiya/Study-Notes-App" target="_blank" class="gh-btn"><i
-                class="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/Jemitbagadiya/Study-Notes-App" 
+              target="_blank" 
+              class="gh-btn">
+              <i class="fab fa-github"></i> GitHub </a>
           </div>
           <h3 class="project-title">Study Notes AI</h3>
-          <p class="project-desc">An AI-powered Android application that generates smart study notes, important points,
-            MCQs, and viva questions from any topic. Features secure Firebase authentication,
-            cloud-based note storage with Firestore, and a modern fragment-based UI built with Java and XML.</p>
+          <p class="project-desc">An AI-powered Android study assistant built with Java that 
+            uses the OpenRouter API with DeepSeek to generate structured notes, important points, 
+            MCQs, and viva questions. Users can authenticate with Firebase, save notes in 
+            Cloud Firestore, and share, copy, export as PDF, or delete generated notes.</p>
           <div class="project-tech">
-            <span>Java</span><span>Firebase</span><span>API</span><span>AI</span><span>Android</span><span>OkHttp</span>
+            <span>Java</span>
+            <span>Android</span>
+            <span>Firebase</span>
+            <span>OpenRouter API</span>
+            <span>Deepseek</span>
+            <span>AI</span>
+            <span>OkHttp</span>
           </div>
           <a
             href="https://drive.google.com/uc?export=download&id=1ifC7kCP8AiA0rcGYaQtZz3Dr0tip4ivI"
@@ -281,49 +316,80 @@
         </div>
 
         <div class="project-card glass reveal-up" style="--d:0.2s">
-          <div class="project-num">03</div>
+          <div class="project-num">04</div>
           <div class="project-top">
             <div class="project-icon-wrap"><i class="fas fa-sticky-note"></i></div>
-            <a href="https://github.com/Jemitbagadiya/Smart-Notes" target="_blank" class="gh-btn"><i
-                class="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/Jemitbagadiya/Smart-Notes" 
+              target="_blank" 
+              class="gh-btn">
+              <i class="fab fa-github"></i> GitHub </a>
           </div>
           <h3 class="project-title">Smart Notes</h3>
-          <p class="project-desc">A full stack notes application with complete CRUD operations and a robust auth system.
-            Users can create, organize, update, and delete notes with a responsive interface.</p>
+          <p class="project-desc">Smart Notes is a web-based blogging and note-sharing platform that 
+            allows users to create, publish, explore, and interact with educational content. 
+            It includes user authentication, OTP-based signup and password recovery, 
+            blog creation and management, an explore section for educational blogs, 
+            profile management, contact and feedback functionality, and a responsive user interface.</p>
           <div class="project-tech">
-            <span>Full Stack</span><span>CRUD</span><span>Auth</span><span>MongoDB-atlas</span>
+            <span>Full Stack</span>
+            <span>Node.js</span>
+            <span>CRUD</span>
+            <span>Auth</span>
+            <span>MongoDB-atlas</span>
           </div>
         </div>
 
         <div class="project-card glass reveal-up" style="--d:0.1s">
-          <div class="project-num">04</div>
+          <div class="project-num">05</div>
           <div class="project-top">
-            <div class="project-icon-wrap"><i class="fas fa-chart-bar"></i></div>
-            <a href="https://github.com/Jemitbagadiya/CallSense" target="_blank" class="gh-btn"><i
-                class="fab fa-github"></i> GitHub</a>
+            <div class="project-icon-wrap"><i class="fas fa-phone-volume"></i></div>
+            <a href="https://github.com/Jemitbagadiya/CallSense" 
+              target="_blank" 
+              class="gh-btn">
+              <i class="fab fa-github"></i> GitHub </a>
           </div>
           <h3 class="project-title">CallSense</h3>
-          <p class="project-desc">A call analytics web app with a Django backend, handling API integration. Delivers
-            meaningful insights from call data through a clean dashboard.</p>
+          <p class="project-desc">CallSense is an AI-powered customer call analysis tool that converts 
+            MP3/WAV recordings into text using the AssemblyAI API. It processes the 
+            transcript to extract and rank important, frequently occurring keywords/topics, 
+            helping businesses quickly identify common customer concerns and discussion points.</p>
           <div class="project-tech">
-            <span>Django</span><span>Python</span><span>API</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Django</span>
+            <span>Python</span>
+            <span>API</span>
           </div>
         </div>
 
         <div class="project-card glass reveal-up" style="--d:0.2s">
-          <div class="project-num">05</div>
+          <div class="project-num">06</div>
           <div class="project-top">
-            <div class="project-icon-wrap"><i class="fas fa-chart-line"></i></div>
-            <a href="https://github.com/Jemitbagadiya/ExpenseTracker" target="_blank" class="gh-btn"><i
-                class="fab fa-github"></i> GitHub</a>
+            <div class="project-icon-wrap"><i class="fas fa-coins"></i></div>
+            <div>
+              <a href="https://github.com/Jemitbagadiya/ExpenseTracker" 
+                target="_blank" 
+                class="gh-btn">
+                <i class="fab fa-github"></i> GitHub </a>
+              <a href="https://expensetracker-m111.onrender.com/"
+                target="_blank"
+                class="gh-btn">
+                <i class="fas fa-external-link-alt"></i> Live Demo </a>
+            </div>
           </div>
           <h3 class="project-title">Expense Tracker</h3>
-          <p class="project-desc">A full stack expense management application with secure authentication, transaction
-            tracking, and real-time financial analytics. Users can manage income and expenses through a clean,
-            responsive dashboard with detailed insights and reports.</p>
+          <p class="project-desc">Expense Tracker is a full-stack web application for managing personal 
+            income and expenses. Users can create accounts, add and categorize transactions, 
+            and track total income, expenses, and balance through a dashboard with visual charts. 
+            It also includes transaction history, profile management, dark mode, and responsive UI, 
+            with data stored in MongoDB and managed through a Node.js/Express backend.</p>
           <div class="project-tech">
-            <span>Full Stack</span><span>Auth</span><span>bcrypt</span><span>MongoDB-atlas</span><span>Donut
-              Chart</span>
+            <span>Full Stack</span>
+            <span>Auth</span>
+            <span>Node.js</span>
+            <span>MongoDB-atlas</span>
+            <span>Chart</span>
           </div>
         </div>
 
@@ -346,8 +412,35 @@
             <span class="exp-badge achiev-badge">Achievement</span>
             <h3 class="exp-title">Codewave 1.0 Hackathon</h3>
             <p class="exp-role">🥈 Runner-Up</p>
-            <p class="exp-desc">Secured the Runner-Up position at Codewave 1.0, demonstrating rapid problem-solving,
-              teamwork, and delivery of a working solution under time pressure.</p>
+            <p class="exp-desc">Secured the <b>Runner-Up position at Codewave 1.0</b>, demonstrating strong 
+              problem-solving, teamwork, technical skills, creativity, and the ability to develop and 
+              deliver an effective working solution under challenging time constraints.</p>
+          </div>
+        </div>
+
+        <div class="exp-card glass reveal-up" style="--d:0.12s">
+          <div class="exp-icon intern-icon"><i class="fas fa-code"></i></div>
+          <div class="exp-body">
+            <span class="exp-badge intern-badge">Internship</span>
+            <h3 class="exp-title">Minds Invasion</h3>
+            <p class="exp-role">Full Stack Developer Intern</p>
+            <p class="exp-desc">Successfully completed a Full Stack Development internship, 
+              collaborating within a team, owning a defined module, 
+              and contributing to real-world projects under mentor guidance.</p>
+            <div class="exp-tech">
+              <span>Full Stack</span>
+              <span>Next.js</span>
+              <span>API Integration</span>
+              <span>Gemini API</span>
+              <span>SerpAPI</span>
+              <span>SEO</span>
+            </div>
+            <!-- Certificate Button -->
+            <a href="https://drive.google.com/file/d/1xqPMH5Yu7lx5hHmUW6oFNyT8g9mPau-9/view?usp=drive_link"
+              target="_blank" class="cert-btn">
+              <i class="fas fa-file-pdf"></i>
+              View Certificate
+            </a>
           </div>
         </div>
 
@@ -357,12 +450,14 @@
             <span class="exp-badge intern-badge">Internship</span>
             <h3 class="exp-title">AAN Web Solutions</h3>
             <p class="exp-role">Flutter Developer Trainee</p>
-            <p class="exp-desc">Completed internship training as a Flutter Developer,
-              gaining hands-on experience in mobile application
-              development, UI design, and problem-solving while
-              working on real-world development tasks.</p>
+            <p class="exp-desc">Completed Flutter Developer training, gaining hands-on 
+              experience in mobile application development, UI design, 
+              and problem-solving through real-world development tasks.</p>
             <div class="exp-tech">
-              <span>Flutter</span><span>Dart</span><span>Mobile App</span><span>UI Design</span>
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>Mobile App</span>
+              <span>UI Design</span>
             </div>
             <!-- Certificate Button -->
             <a href="https://drive.google.com/file/d/1_nk4kg6BA_vOX2a4ZOEGfesdOsZz-NrM/view?usp=drive_link"
@@ -382,7 +477,9 @@
             <p class="exp-desc">Developed GUI-based desktop applications using Python's Tkinter library, gaining
               hands-on experience building functional interfaces and strengthening core Python skills.</p>
             <div class="exp-tech">
-              <span>Python</span><span>Tkinter</span><span>GUI Dev</span>
+              <span>Python</span>
+              <span>Tkinter</span>
+              <span>GUI Dev</span>
             </div>
           </div>
         </div>

@@ -128,12 +128,7 @@
   }
 
   /* EXPERIENCE */
-  .exp-grid {
-    grid-template-columns: 1fr;
-  }
-  .exp-card {
-    flex-direction: column;
-  }
+  /* Experience timeline is handled by experience.css */
 
   /* CONTACT */
   .contact-grid {
