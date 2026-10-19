@@ -175,3 +175,13 @@
     font-size: 2.8rem;
   }
 }
+
+/* Hero Mobile Responsive Fix */
+@media (max-width: 960px) {
+  .hero-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+  }
+}
